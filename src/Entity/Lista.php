@@ -38,4 +38,68 @@ class Lista
      * @var \DateTime
      */
     private $fecha;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNombre(): string
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * @param string $nombre
+     * @return Lista
+     */
+    public function setNombre(string $nombre): Lista
+    {
+        $this->nombre = $nombre;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescripcion(): string
+    {
+        return $this->descripcion;
+    }
+
+    /**
+     * @param string $descripcion
+     * @return Lista
+     */
+    public function setDescripcion(string $descripcion): Lista
+    {
+        $this->descripcion = $descripcion;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getFecha(): ?\DateTime
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * @param \DateTime $fecha
+     * @return Lista
+     */
+    public function setFecha(\DateTime $fecha = null): Lista
+    {
+        $this->fecha = $fecha;
+        return $this;
+    }
+
+
 }

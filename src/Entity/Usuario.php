@@ -69,5 +69,157 @@ class Usuario
      */
     private $administrador;
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNombre(): string
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * @param string $nombre
+     * @return Usuario
+     */
+    public function setNombre(string $nombre): Usuario
+    {
+        $this->nombre = $nombre;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getApellidos(): string
+    {
+        return $this->apellidos;
+    }
+
+    /**
+     * @param string $apellidos
+     * @return Usuario
+     */
+    public function setApellidos(string $apellidos): Usuario
+    {
+        $this->apellidos = $apellidos;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNif(): string
+    {
+        return $this->nif;
+    }
+
+    /**
+     * @param string $nif
+     * @return Usuario
+     */
+    public function setNif(string $nif): Usuario
+    {
+        $this->nif = $nif;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDireccion(): string
+    {
+        return $this->direccion;
+    }
+
+    /**
+     * @param string $direccion
+     * @return Usuario
+     */
+    public function setDireccion(string $direccion): Usuario
+    {
+        $this->direccion = $direccion;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     * @return Usuario
+     */
+    public function setEmail(string $email): Usuario
+    {
+        $this->email = $email;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTlf(): string
+    {
+        return $this->tlf;
+    }
+
+    /**
+     * @param string $tlf
+     * @return Usuario
+     */
+    public function setTlf(string $tlf): Usuario
+    {
+        $this->tlf = $tlf;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getFecha(): ?\DateTime
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * @param \DateTime $fecha
+     * @return Usuario
+     */
+    public function setFecha(\DateTime $fecha = null): Usuario
+    {
+        $this->fecha = $fecha;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isAdministrador(): bool
+    {
+        return $this->administrador;
+    }
+
+    /**
+     * @param bool $administrador
+     * @return Usuario
+     */
+    public function setAdministrador(bool $administrador): Usuario
+    {
+        $this->administrador = $administrador;
+        return $this;
+    }
+
 
 }
