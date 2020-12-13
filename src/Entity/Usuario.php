@@ -34,7 +34,7 @@ class Usuario
     private $apellidos;
 
     /**
-     * @ORM\Column(type="string", length=10)
+     * @ORM\Column(type="string", length=10, unique=true)
      * @var string
      */
     private $nif;
@@ -46,7 +46,7 @@ class Usuario
     private $direccion;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=50, unique=true)
      * @var string
      */
     private $email;
@@ -68,4 +68,6 @@ class Usuario
      * @var bool
      */
     private $administrador;
+
+
 }
