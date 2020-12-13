@@ -40,17 +40,17 @@ class Lista
     private $fecha;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Usuario", mappedBy="listas")
-     * @var Usuario[]|Collection
+     * @ORM\ManyToMany(targetEntity="Producto", mappedBy="listas")
+     * @var Producto[]|Collection
      */
-    private $usuarios;
+    private $productos;
 
     /**
      * Lista constructor.
      */
     public function __construct()
     {
-        $this->usuarios = new ArrayCollection();
+        $this->productos = new ArrayCollection();
     }
 
 

@@ -58,6 +58,21 @@ class Producto
     private $calorias;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Lista", inversedBy="productos")
+     * @var Lista[]|Collection
+     */
+    private $listas;
+
+    /**
+     * Producto constructor.
+     */
+    public function __construct()
+    {
+        $this->listas = new ArrayCollection();
+    }
+
+
+    /**
      * @return int
      */
     public function getId(): int
