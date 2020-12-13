@@ -70,6 +70,21 @@ class Usuario
     private $administrador;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Lista", inversedBy="usuarios")
+     * @var Lista[]|Collection
+     */
+    private $listas;
+
+    /**
+     * Usuario constructor.
+     */
+    public function __construct()
+    {
+        $this->listas = new ArrayCollection();
+    }
+
+
+    /**
      * @return int
      */
     public function getId(): int

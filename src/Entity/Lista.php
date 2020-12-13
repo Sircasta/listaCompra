@@ -40,6 +40,21 @@ class Lista
     private $fecha;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Usuario", mappedBy="listas")
+     * @var Usuario[]|Collection
+     */
+    private $usuarios;
+
+    /**
+     * Lista constructor.
+     */
+    public function __construct()
+    {
+        $this->usuarios = new ArrayCollection();
+    }
+
+
+    /**
      * @return int
      */
     public function getId(): int
