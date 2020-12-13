@@ -53,6 +53,12 @@ class Lista
         $this->productos = new ArrayCollection();
     }
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="listas")
+     * @ORM\JoinColumn(nullable=false)
+     * @var Usuario
+     */
+    private $usuario;
 
     /**
      * @return int
@@ -113,6 +119,42 @@ class Lista
     public function setFecha(\DateTime $fecha = null): Lista
     {
         $this->fecha = $fecha;
+        return $this;
+    }
+
+    /**
+     * @return Producto[]|Collection
+     */
+    public function getProductos()
+    {
+        return $this->productos;
+    }
+
+    /**
+     * @param Producto[]|Collection $productos
+     * @return Lista
+     */
+    public function setProductos($productos)
+    {
+        $this->productos = $productos;
+        return $this;
+    }
+
+    /**
+     * @return Usuario
+     */
+    public function getUsuario(): Usuario
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * @param Usuario $usuario
+     * @return Lista
+     */
+    public function setUsuario(Usuario $usuario): Lista
+    {
+        $this->usuario = $usuario;
         return $this;
     }
 

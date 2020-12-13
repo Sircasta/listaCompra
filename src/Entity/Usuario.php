@@ -70,6 +70,21 @@ class Usuario
     private $administrador;
 
     /**
+     * @ORM\OneToMany(targetEntity="Lista", mappedBy="usuario")
+     * @var Lista[]|Collection
+     */
+    private $listas;
+
+    /**
+     * Usuario constructor.
+     */
+    public function __construct()
+    {
+        $this->listas = new ArrayCollection();
+    }
+
+
+    /**
      * @return int
      */
     public function getId(): int
@@ -218,6 +233,24 @@ class Usuario
     public function setAdministrador(bool $administrador): Usuario
     {
         $this->administrador = $administrador;
+        return $this;
+    }
+
+    /**
+     * @return Lista[]|Collection
+     */
+    public function getListas()
+    {
+        return $this->listas;
+    }
+
+    /**
+     * @param Lista[]|Collection $listas
+     * @return Usuario
+     */
+    public function setListas($listas)
+    {
+        $this->listas = $listas;
         return $this;
     }
 
